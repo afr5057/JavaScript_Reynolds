@@ -28,7 +28,7 @@ console.log(data);
    //need this to do the filter
    d3.select(".summary").html("");
  
-   // user input as variable
+   // user input as variable for date
    var inputElement = d3.select("#datetime");
    var inputValue = inputElement.property("value");
     
@@ -43,7 +43,7 @@ console.log(data);
        cell.text(value);
 
    
-  //  //user input state variable
+  //  //user input state variable for state - work in progress
   //  var inputElement = d3.select("#data");
   //  var inputState = inputElement.property("state");
 
