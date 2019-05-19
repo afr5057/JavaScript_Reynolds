@@ -1,5 +1,18 @@
+// from data.js
 var tableData = data;
+
 console.log(tableData);
+
+//add new ufo sighting record
+var add_record = {
+  datetime: "1/28/1996",
+  city: "dallas",
+  state: "tx",
+  country: "us",
+  shape: "star",
+  durationMinutes: "5 mins.",
+  comments: "Cowboys win a superbowl, that's alien!."}
+tableData.splice(2, 0, add_record);
 
 // Get a reference to the table body
 var tbody = d3.select("tbody");
@@ -15,11 +28,9 @@ console.log(data);
      var cell = tbody.append("td");
      cell.text(value);
    });
- });
-
-
+  });
  var submit = d3.select("#submit");
-
+    
  // function to take input and recreate table
  submit.on("click", function() {
    // stops page from refreshing
@@ -42,20 +53,12 @@ console.log(data);
        var cell = tbody.append("td");
        cell.text(value);
 
-   
-  //  //user input state variable for state - work in progress
-  //  var inputElement = d3.select("#data");
-  //  var inputState = inputElement.property("state");
+    });
+  });
+});
 
-  //  //filter state
-  //      var filteredState = tableData.filter(tableData => tableData.data ===inputState);  
-   
-  //  // loop through for state
-  //  filteredState.forEach((stateData) => {
-  //    var row = tbody.append("tr");
-  //    Object.entries(stateData).forEach(([key, value]) => {
-  //      var cell = tbody.append("td");
-  //      cell.text(value);
-     });
-   });
- });
+{/* <script type='text/javascript'>
+  (document).ready(function() {
+    ('.filter').multifilter()
+    })
+</script> */}
